@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine Day</title>
+    <style>
+        body {
+            background: #ffe6f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 60px;
+        }
+        h1 { color: #e6005c; }
+        h2 { color: #ff3385; }
+        p { font-size: 20px; }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            margin: 15px;
+        }
+        .yes {
+            background-color: #ff4d88;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+        }
+        .shayari {
+            text-align: left;
+            margin: 30px 20%;
+            font-style: italic;
+            color: #e6005c;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Happy Valentine’s Day 💖</h1>
+<h2>Pratik 💕</h2>
+
+<p id="message">Will you be my Valentine forever? 💍</p>
+
+<button class="yes" onclick="showLove()">Yes</button>
+<button class="no" onclick="alert('Still you are my Valentine 😊')">No</button>
+
+<!-- Hidden audio -->
+<audio id="loveSong" src="your_song.mp3" preload="auto"></audio>
+
+<script>
+function showLove() {
+    // Change main message
+    const msg = document.getElementById('message');
+    msg.innerHTML = "U R My Valentine 😘";
+
+    // Add shayari
+    const shayari = document.createElement('p');
+    shayari.className = 'shayari';
+    shayari.innerHTML = "I have completely fallen for you.<br>" +
+                        "Everything you do, everything you say, everything you are.<br>" +
+                        "You're my first thought in the morning, you're my last thought before I fall asleep,<br>" +
+                        "and you're almost every thought in between. 💖";
+    document.body.appendChild(shayari);
+
+    // Play song
+    const song = document.getElementById('loveSong');
+    song.play();
+}
+</script>
+
+</body>
+</html>
